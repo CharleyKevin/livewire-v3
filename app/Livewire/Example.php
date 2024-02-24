@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class Example extends Component
 {
-    public string $name = '';
+    public string $name = 'Charley';
     public string $lastName = '';
 
 
@@ -21,5 +21,10 @@ class Example extends Component
             'name' => 'John',
             'lastName' => 'Doe'
         ]);
+    }
+
+    public function refresh()
+    {
+        $this->reset('name', 'lastName');
     }
 }
